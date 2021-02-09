@@ -4,6 +4,8 @@ const handle = require('./handle');
 const app = express();
 const admin = express();
 
+app.set('view engine', 'ejs');
+
 app.use(express.static(__dirname + '/public/', {
     index: 'test.js'
 }));
