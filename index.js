@@ -2,13 +2,15 @@ const express = require('express');
 
 const app = express();
 
+const router = express.Router();
+
 app.use(express.static(__dirname + '/public/', {
     index: 'test.js'
-}))
+}));
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.send('this is home page for get request.')
 });
 
